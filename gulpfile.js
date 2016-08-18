@@ -3,7 +3,7 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
-var jade        = require('gulp-jade');
+var pug        = require('gulp-pug');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -68,9 +68,9 @@ gulp.task('sass', function () {
 * Travis is trying to Gulp stuff
 */
 
-gulp.task('jade', function(){
-  return gulp.src('_jadefiles/*.jade')
-  .pipe(jade())
+gulp.task('pug', function(){
+  return gulp.src('_pugfiles/*.pug')
+  .pipe(pug())
   .pipe(gulp.dest('_includes'));
 });
 
@@ -83,7 +83,7 @@ gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['sass']);
     gulp.watch('assets/js/**', ['jekyll-rebuild']);
     gulp.watch(['index.html', '_layouts/*.html', '_includes/*'], ['jekyll-rebuild']);
-    gulp.watch('_jadefiles/*.jade', ['jade']);
+    gulp.watch('_pugfiles/*.pug', ['pug']);
 });
 
 
