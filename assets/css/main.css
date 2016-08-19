@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Fira+Sans';
+@import 'https://fonts.googleapis.com/css?family=Fira+Sans:400,400i';
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -441,7 +441,15 @@ body {
   background: #F6F6F8;
   font-size: 14px;
   line-height: 1.6;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Fira Sans' sans-serif;
   color: #2E2D33;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
+
+section.boottest h1 {
+  margin-bottom: 20px;
+  margin-top: 0px;
+  padding-top: 30px; }
+
+.home-wrap {
+  min-height: 100vh; }
