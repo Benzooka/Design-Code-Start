@@ -50,3 +50,6 @@ body {
   background-image: url(../img/amaretto1.jpg);
   background-size: cover;
   background-position: center; }
+
+.navbar-toggler {
+  color: white; }
