@@ -1,0 +1,23 @@
+mixin nav-content()
+  ul
+    li: a(href="#") Indiegogo
+    li: a(href="#") Spirits
+    li: a(href="#") Distillery
+    li: a(href="#") Cocktails
+    li: a(href="#") Media
+    li: a(href="#") Contact
+    li: a(href="#") Map
+    li: a(href="#") Store
+    li: a(href="#") Insta
+
+.mobile-nav.lead
+  +nav-content()
+
+header
+  .header-position
+    h1.logo.display-3 SONS OF VANCOUVER DISTILLERY
+
+    nav.site-nav.lead
+      +nav-content()
+
+    .mobile-nav-toggle: span

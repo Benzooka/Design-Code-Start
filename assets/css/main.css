@@ -2,15 +2,15 @@
 @import url(0-tools/bootstrap.min.css);
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
-  color: #BD5248; }
+  color: #FFF; }
 
 a {
-  color: #BD5248;
+  color: #FFF;
   text-decoration: none;
   outline: 0; }
 
 a:hover, a:focus {
-  color: #d89993; }
+  color: white; }
 
 ::-moz-selection {
   background: #FFF498; }
@@ -45,11 +45,149 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
+header .header-position {
+  position: fixed;
+  width: 100vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  header .header-position .site-nav ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    list-style: none; }
+    header .header-position .site-nav ul li {
+      margin-right: 5px; }
+
+header .mobile-nav-toggle {
+  display: none;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  margin-top: 10px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center;
+  cursor: pointer; }
+  header .mobile-nav-toggle span,
+  header .mobile-nav-toggle span:before,
+  header .mobile-nav-toggle span:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #FFF;
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  header .mobile-nav-toggle span:before {
+    top: 15px; }
+  header .mobile-nav-toggle span:after {
+    top: -17px; }
+  header .mobile-nav-toggle.is-open span {
+    background: transparent; }
+  header .mobile-nav-toggle.is-open span:before,
+  header .mobile-nav-toggle.is-open span:after {
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 0; }
+  header .mobile-nav-toggle.is-open span:before {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+
+.mobile-nav {
+  display: none;
+  position: absolute;
+  width: 50%;
+  margin: 25px 25% 0;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .mobile-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .mobile-nav li {
+    text-align: center;
+    margin-bottom: 10px; }
+
+@media (max-width: 767px) {
+  header {
+    width: auto; }
+    header .header-position {
+      width: 100vw;
+      position: fixed;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+                  -ms-grid-row-align: center;
+              align-items: center; }
+    header .site-nav {
+      display: none; }
+    header h1 {
+      overflow: hidden;
+      text-indent: 101%;
+      white-space: nowrap;
+      height: 80px;
+      width: 80px;
+      margin-top: 20px;
+      margin-left: 10px;
+      background-image: url(/assets/img/sovwhite.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-padding: 0;
+      background-margin: 0; }
+    header .mobile-nav-toggle {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+  .mobile-nav.is-open {
+    z-index: 1;
+    display: block;
+    -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+            transform: translateY(0%); } }
+
+@media (max-width: 543px) {
+  header h1 {
+    width: 80px; } }
+
 .home {
   height: 100vh;
+  min-height: 320px;
   background-image: url(../img/amaretto1.jpg);
   background-size: cover;
   background-position: center; }
-
-.navbar-toggler {
-  color: white; }
